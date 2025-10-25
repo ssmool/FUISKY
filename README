@@ -10,6 +10,12 @@ chmod +x fujizksy.sh
 
 sudo ./fujizksy.sh
 
+To use Crossover, usage step 1, 2 and 3 for script:
+
+fujizksy_all.sh
+
+README MANUAL FOR APPEND THE SCRIPT TO ANDROID APK OR C++ APPLICATIONS: ![MANUAL OF USE WITH OPEN SOURCE COMPILER][./manual.mdf]
+
 🧠 Notes
 
 Works on Linux, can be adapted for FreeBSD/macOS (replace iptables with pfctl or nft).
