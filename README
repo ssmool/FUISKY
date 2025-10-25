@@ -1,0 +1,33 @@
+⚙️ How to Use
+
+1.Save as fujizksy.sh
+
+2.Make executable:
+
+chmod +x fujizksy.sh
+
+3.Run as root (required for firewall/process actions):
+
+sudo ./fujizksy.sh
+
+🧠 Notes
+
+Works on Linux, can be adapted for FreeBSD/macOS (replace iptables with pfctl or nft).
+
+Requires basic tools: netstat, ps, top, nmcli, iptables.
+
+Add more commands in each section if needed (like nmap, ss, etc.).
+
+4.To make the script cross-platform and automatically detect the operating system (Linux, FreeBSD, macOS, or Windows with WSL), we'll need to adapt certain commands, particularly the firewall tools and network monitoring tools. I will integrate the necessary logic to identify the platform and switch the commands accordingly.
+
+Here’s how we can enhance the script:
+
+Linux: Use iptables or nft for firewall management.
+
+FreeBSD: Use pfctl for firewall.
+
+macOS: Use pfctl for firewall (similar to FreeBSD).
+
+Windows (via WSL): We'll rely on netsh for firewall management and PowerShell for system commands.
+
+I'll make the necessary changes to the script below, with platform detection at the start of the script.]
