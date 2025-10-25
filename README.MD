@@ -1,10 +1,10 @@
-#### FUISKY - Fujizksy Security & Network Console
+FUISKY - Fujizksy Security & Network Console
 
-## Overview
+Overview
 
 FUISKY is a powerful and flexible **cross-platform security and network monitoring tool**. Developed by **asytrick**, it enables users to efficiently manage their system's security settings, monitor network traffic, and apply firewall rules. Whether you're securing a Linux server, a macOS workstation, or an Android device, **FUISKY** offers customizable options for securing your environment.
 
-## Key Features:
+Key Features:
 
 Network Monitoring**: View active network connections, identify programs and PIDs, and manage blocked IPs.
 Process and Resource Management**: Monitor CPU, RAM, and Disk usage with easy-to-read reports, and manage process forks.
@@ -16,7 +16,7 @@ Automated Setup**: Simplified installation and configuration guide to help you s
 
 ---
 
-## ⚙️ How to Use
+⚙️ How to Use
 
 Save as fujizksy.sh
 
@@ -30,9 +30,11 @@ chmod +x fujizksy.sh
 
 ```bash
 sudo ./fujizksy.sh
+#For all platforms or crossover use the script: ./fujizksy_all.sh
+
 ```
 
-### 🧠 Notes
+🧠 Notes
 
 Works on Linux, can be adapted for FreeBSD/macOS (replace iptables with pfctl or nft).
 
