@@ -1,35 +1,35 @@
-### FUISKY - Fujizksy Security & Network Console
+FUISKY - Fujizksy Security & Network Console
 
-## Overview
+Overview
 
-**FUISKY** is a powerful and flexible **cross-platform security and network monitoring tool**. Developed by **asytrick**, it enables users to efficiently manage their system's security settings, monitor network traffic, and apply firewall rules. Whether you're securing a Linux server, a macOS workstation, or an Android device, **FUISKY** offers customizable options for securing your environment.
+FUISKY is a powerful and flexible **cross-platform security and network monitoring tool**. Developed by **asytrick**, it enables users to efficiently manage their system's security settings, monitor network traffic, and apply firewall rules. Whether you're securing a Linux server, a macOS workstation, or an Android device, **FUISKY** offers customizable options for securing your environment.
 
-### Key Features:
+Key Features:
 
-* **Network Monitoring**: View active network connections, identify programs and PIDs, and manage blocked IPs.
-* **Process and Resource Management**: Monitor CPU, RAM, and Disk usage with easy-to-read reports, and manage process forks.
-* **Firewall Configuration**: Set and adjust multiple security levels (Basic, Medium, Hard) using built-in firewall tools (`iptables`, `pfctl`, etc.).
-* **Security Hardening**: Disable unnecessary services, enhance system security, and lock down the device or network settings.
-* **Cross-Platform Support**: Works on **Linux**, **FreeBSD**, **macOS**, and **Android (with root)**.
-* **Perl Integration**: Run shell scripts from Perl, enabling easy automation and configuration.
-* **Automated Setup**: Simplified installation and configuration guide to help you set up FUISKY and get started quickly.
+Network Monitoring**: View active network connections, identify programs and PIDs, and manage blocked IPs.
+Process and Resource Management**: Monitor CPU, RAM, and Disk usage with easy-to-read reports, and manage process forks.
+Firewall Configuration**: Set and adjust multiple security levels (Basic, Medium, Hard) using built-in firewall tools (`iptables`, `pfctl`, etc.).
+Security Hardening**: Disable unnecessary services, enhance system security, and lock down the device or network settings.
+Cross-Platform Support**: Works on **Linux**, **FreeBSD**, **macOS**, and **Android (with root)**.
+Perl Integration**: Run shell scripts from Perl, enabling easy automation and configuration.
+Automated Setup**: Simplified installation and configuration guide to help you set up FUISKY and get started quickly.
 
 ---
 
-## Installation
+Installation
 
-### Requirements
+Requirements
 
-* **Linux/FreeBSD/macOS**:
+Linux/FreeBSD/macOS**:
 
-  * Ensure firewall management tools (`iptables`, `pfctl`, `nft`, etc.) are available on your system.
-  * **Perl** or **Bash** for running shell scripts.
-* **Android**:
+ Ensure firewall management tools (`iptables`, `pfctl`, `nft`, etc.) are available on your system.
+ Perl or Bash for running shell scripts.
+ Android:
 
-  * Requires a **rooted device** or **Android WSL** for running system commands.
-  * **Perl** interpreter should be available, or use Bash commands.
+  Requires a rooted device or Android WSL for running system commands.
+  Perl interpreter should be available, or use Bash commands.
 
-### Step 1: Clone the Repository
+Step 1: Clone the Repository
 
 To get started, clone the **FUISKY** project from GitHub:
 
@@ -38,16 +38,16 @@ git clone https://github.com/ssmool/FUISKY.git
 cd FUISKY
 ```
 
-### Step 2: Build the Project
+Step 2: Build the Project
 
-#### For **Android**:
+For **Android**:
 
 1. Open the project in **Android Studio**.
 2. Ensure you have **CMakeLists.txt** and **native-lib.cpp** configured correctly.
 3. Build the project using Android Studio's build system.
 4. Install the app on your device/emulator and press the **Run Script** button to execute the shell script from assets.
 
-#### For **Linux/FreeBSD/macOS**:
+For **Linux/FreeBSD/macOS**:
 
 1. Open a terminal and navigate to the project folder.
 2. Run the script directly:
@@ -58,9 +58,9 @@ bash fujizksy.sh
 
 ---
 
-## Usage
+Usage
 
-### Running the Script
+Running the Script
 
 Once you have the application installed, use the following features from the interactive menu:
 
@@ -78,7 +78,7 @@ Once you have the application installed, use the following features from the int
 8. **Auto Firewall**: Automatically configure the firewall for common services like HTTP, FTP, DNS, and DHCP.
 9. **First Install**: Setup and configuration walkthrough for new users, guiding them through setting up firewalls and security levels.
 
-### Example Command:
+Example Command:
 
 On Linux or macOS, to manually run the script:
 
@@ -88,7 +88,7 @@ bash fujizksy.sh
 
 ---
 
-## Contributing
+Contributing
 
 We welcome contributions! If you would like to improve **FUISKY**, submit a **pull request** on GitHub with your changes. Please follow these guidelines:
 
@@ -100,7 +100,7 @@ We welcome contributions! If you would like to improve **FUISKY**, submit a **pu
 
 ---
 
-## Contact
+Contact
 
 This project is maintained by **asytrick**.
 
@@ -109,18 +109,13 @@ You can contact the author at:
 
 ---
 
-## Documentation
+Documentation
 
 For detailed documentation, guides, and setup instructions, refer to the **[manual.mdf](https://github.com/ssmool/FUISKY/manual.mdf)**.
 
 ---
 
-## Hashtags
+Hashtags
 
 #FUISKY #NetworkSecurity #SystemHardening #FirewallManagement #LinuxSecurity #FreeBSD #macOSSecurity #AndroidSecurity #AndroidApp #CPlusPlus #PerlScript #Automation #OpenSource #CyberSecurity #NetworkMonitoring #Firewall #SecurityTools #SysAdmin #CrossPlatform #Fujizksy
 
----
-
-This **`README.md`** is now updated with more structured details, making it clearer and more comprehensive for users. It also includes a contact section, contributing instructions, and links to documentation.
-
-Let me know if you need further modifications or additional content!
