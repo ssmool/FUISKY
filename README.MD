@@ -54,7 +54,7 @@ You can contact the author at:
 
 Documentation
 
-For detailed documentation, guides, and setup instructions, refer to the **[manual.mdf](https://github.com/ssmool/FUISKY/manual.mdf)**.
+For detailed documentation, guides, and setup instructions, refer to the **[manual.mdf](https://github.com/ssmool/FUISKY/manual.md)**.
 
 ---
 
