@@ -1,10 +1,10 @@
-FUISKY - Fujizksy Security & Network Console
+#### FUISKY - Fujizksy Security & Network Console
 
-Overview
+## Overview
 
 FUISKY is a powerful and flexible **cross-platform security and network monitoring tool**. Developed by **asytrick**, it enables users to efficiently manage their system's security settings, monitor network traffic, and apply firewall rules. Whether you're securing a Linux server, a macOS workstation, or an Android device, **FUISKY** offers customizable options for securing your environment.
 
-Key Features:
+## Key Features:
 
 Network Monitoring**: View active network connections, identify programs and PIDs, and manage blocked IPs.
 Process and Resource Management**: Monitor CPU, RAM, and Disk usage with easy-to-read reports, and manage process forks.
@@ -16,88 +16,29 @@ Automated Setup**: Simplified installation and configuration guide to help you s
 
 ---
 
-Installation
+## ⚙️ How to Use
 
-Requirements
+Save as fujizksy.sh
 
-Linux/FreeBSD/macOS**:
-
- Ensure firewall management tools (`iptables`, `pfctl`, `nft`, etc.) are available on your system.
- Perl or Bash for running shell scripts.
- Android:
-
-  Requires a rooted device or Android WSL for running system commands.
-  Perl interpreter should be available, or use Bash commands.
-
-Step 1: Clone the Repository
-
-To get started, clone the **FUISKY** project from GitHub:
+Make executable:
 
 ```bash
-git clone https://github.com/ssmool/FUISKY.git
-cd FUISKY
+chmod +x fujizksy.sh
 ```
 
-Step 2: Build the Project
-
-For **Android**:
-
-1. Open the project in **Android Studio**.
-2. Ensure you have **CMakeLists.txt** and **native-lib.cpp** configured correctly.
-3. Build the project using Android Studio's build system.
-4. Install the app on your device/emulator and press the **Run Script** button to execute the shell script from assets.
-
-For **Linux/FreeBSD/macOS**:
-
-1. Open a terminal and navigate to the project folder.
-2. Run the script directly:
+## 3.Run as root (required for firewall/process actions):
 
 ```bash
-bash fujizksy.sh
+sudo ./fujizksy.sh
 ```
 
----
+### 🧠 Notes
 
-Usage
+Works on Linux, can be adapted for FreeBSD/macOS (replace iptables with pfctl or nft).
 
-Running the Script
+Requires basic tools: netstat, ps, top, nmcli, iptables.
 
-Once you have the application installed, use the following features from the interactive menu:
-
-1. **Verify Network Connections**: View live network connections, associated programs, and the option to block IPs or kill processes.
-2. **Verify Process Forks/CPU/RAM Usage**: View active processes, CPU usage, RAM, and disk stats, with the ability to kill processes or block IPs.
-3. **Verify Network Usage**: Monitor system resources such as CPU, RAM, Disk, and network usage, with an auto-refresh every 10 seconds.
-4. **Security Levels**:
-
-   * **Basic**: Block ping (ICMP), fragmented packets, UDP packets, and block ports >553.
-   * **Medium**: Block all ports, only allow POP3, SMTP, IMAP, DHCP, HTTP, HTTPS, and FTP.
-   * **Hard**: Deny all traffic, create a reverse proxy, and specify allowed ports.
-5. **Lock Security Level**: Fully lockdown system, blocking all connections and killing all processes except the script.
-6. **Leave Security Level**: Restore normal network functionality and re-enable connections.
-7. **Hardening**: Disable unnecessary system services, apply security lockdown, and ensure minimal service exposure.
-8. **Auto Firewall**: Automatically configure the firewall for common services like HTTP, FTP, DNS, and DHCP.
-9. **First Install**: Setup and configuration walkthrough for new users, guiding them through setting up firewalls and security levels.
-
-Example Command:
-
-On Linux or macOS, to manually run the script:
-
-```bash
-bash fujizksy.sh
-```
-
----
-
-Contributing
-
-We welcome contributions! If you would like to improve **FUISKY**, submit a **pull request** on GitHub with your changes. Please follow these guidelines:
-
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature-branch`).
-3. Make your changes and commit them (`git commit -m 'Add feature'`).
-4. Push to your branch (`git push origin feature-branch`).
-5. Open a pull request with a description of your changes.
-
+Add more commands in each section if needed (like nmap, ss, etc.).
 ---
 
 Contact
