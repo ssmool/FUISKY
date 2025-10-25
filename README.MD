@@ -18,6 +18,13 @@ Automated Setup**: Simplified installation and configuration guide to help you s
 
 ⚙️ How to Use
 
+INSTALL BY GIT:
+
+```bash
+git clone https://github.com/ssmool/FUISKY.git my_folder_name
+cd my_folder_name
+```
+
 Save as fujizksy.sh
 
 Make executable:
