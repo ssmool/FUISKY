@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FUJISKY ENTERPRISE</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<style>
+body {
+    background:black;
+    color:#00ff00;
+    font-family:monospace;
+}
+
+h1 { text-align:center; }
+
+.container {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.box {
+    border:1px solid #00ff00;
+    padding:10px;
+    height:250px;
+    overflow:auto;
+}
+
+#map {
+    height:400px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🔥 FUJISKY ENTERPRISE</h1>
+
+<div class="container">
+
+<div class="box">
+<h2>📊 Métricas</h2>
+<div id="metrics"></div>
+</div>
+
+<div class="box">
+<h2>🚨 Eventos</h2>
+<div id="events"></div>
+</div>
+
+<div class="box">
+<h2>🔒 IPs Banidos</h2>
+<div id="banned"></div>
+</div>
+
+<div class="box">
+<h2>⚡ Alertas</h2>
+<div id="alerts"></div>
+</div>
+
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+let map = L.map('map').setView([20,0], 2);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+let markers = [];
+
+async function loadData() {
+    let events = await fetch('/api/events').then(r=>r.json());
+    let banned = await fetch('/api/banned').then(r=>r.json());
+    let metrics = await fetch('/api/metrics').then(r=>r.json());
+    let attacks = await fetch('/api/attacks').then(r=>r.json());
+
+    document.getElementById("events").innerHTML =
+        events.map(e=>`<div>${e}</div>`).join("");
+
+    document.getElementById("banned").innerHTML =
+        banned.map(ip=>`<div>${ip}</div>`).join("");
+
+    document.getElementById("metrics").innerHTML = `
+        CPU: ${metrics.cpu}%<br>
+        Conexões: ${metrics.conn}<br>
+        Processos: ${metrics.proc}
+    `;
+
+    let alerts = events.filter(e => e.includes("ALERT") || e.includes("BAN"));
+    document.getElementById("alerts").innerHTML =
+        alerts.map(a=>`<div style="color:red">${a}</div>`).join("");
+
+    markers.forEach(m=>map.removeLayer(m));
+    markers=[];
+
+    attacks.forEach(a=>{
+        let m = L.circleMarker([a.lat, a.lon], {color:"red"}).addTo(map);
+        m.bindPopup(a.ip);
+        markers.push(m);
+    });
+}
+
+setInterval(loadData, 2000);
+loadData();
+</script>
+
+</body>
+</html>
